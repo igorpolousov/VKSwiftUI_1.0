@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct VKSwiftUI_1_0App: App {
+    @State var isLogin: Bool = false
     var body: some Scene {
         WindowGroup {
-            LoginView(isUserLoggedIn: .constant(false))
+            NavView()
         }
     }
 }

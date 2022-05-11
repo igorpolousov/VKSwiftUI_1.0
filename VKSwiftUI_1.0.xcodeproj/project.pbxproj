@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C24ABF5A282C142400FD364F /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24ABF59282C142400FD364F /* NavView.swift */; };
 		C24C4F93282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4F92282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift */; };
 		C24C4F97282BB0FA00FB9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24C4F96282BB0FA00FB9C1B /* Assets.xcassets */; };
 		C24C4F9A282BB0FA00FB9C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24C4F99282BB0FA00FB9C1B /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C24ABF59282C142400FD364F /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		C24C4F8F282BB0F900FB9C1B /* VKSwiftUI_1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKSwiftUI_1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24C4F92282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKSwiftUI_1_0App.swift; sourceTree = "<group>"; };
 		C24C4F96282BB0FA00FB9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				C24C4FB5282BB2CD00FB9C1B /* AuthSession.swift */,
 				C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */,
+				C24ABF59282C142400FD364F /* NavView.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				C24C4FAA282BB22800FB9C1B /* GroupsView.swift in Sources */,
 				C24C4FB2282BB26C00FB9C1B /* GroupModel.swift in Sources */,
 				C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */,
+				C24ABF5A282C142400FD364F /* NavView.swift in Sources */,
 				C24C4FB8282BB2F000FB9C1B /* APIRequest.swift in Sources */,
 				C24C4FAE282BB24800FB9C1B /* WebView.swift in Sources */,
 				C24C4FA8282BB18E00FB9C1B /* FriendDetailView.swift in Sources */,

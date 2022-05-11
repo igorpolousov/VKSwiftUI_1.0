@@ -13,7 +13,7 @@ import WebKit
 
 struct VkWebView: UIViewRepresentable {
     
-    var successCompletion: () -> Void
+    //var successCompletion: () -> Void
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -36,9 +36,9 @@ struct VkWebView: UIViewRepresentable {
         return urlComponents
    }()
     
-    init(completion: @escaping () -> Void) {
-        successCompletion = completion
-    }
+//    init(completion: @escaping () -> Void) {
+//        successCompletion = completion
+//    }
 
     func makeUIView(context: Context) -> WKWebView {
         let preferences = WKPreferences()
@@ -104,7 +104,7 @@ struct VkWebView: UIViewRepresentable {
             if token.count > 0 && userID > 0 {
                 AuthSession.shared.userId = userID
                 AuthSession.shared.token = token
-                parent.successCompletion()
+                //parent.successCompletion()
             }
 
             decisionHandler(.cancel)
