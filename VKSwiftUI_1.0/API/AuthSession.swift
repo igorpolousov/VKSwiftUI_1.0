@@ -5,4 +5,14 @@
 //  Created by Igor Polousov on 11.05.2022.
 //
 
-import Foundation
+protocol AuthDataProtocol {
+    var token: String { get set }
+    var userId: Int { get set }
+}
+
+final class AuthSession: AuthDataProtocol {
+    var token = ""
+    var userId = 0
+    static let shared = AuthSession()
+    private init() {}
+}

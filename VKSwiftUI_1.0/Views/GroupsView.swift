@@ -20,7 +20,7 @@ struct GroupsView: View {
                 Text("\(group.screenName)")
             }
         }
-        .navigationTitle("Friends")
+        .navigationTitle("Grroups")
     }
 }
 
