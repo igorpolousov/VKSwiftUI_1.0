@@ -12,15 +12,17 @@ struct FriendsView: View {
     
     var body: some View {
         List(friendsDemoData.sorted(by: {$0.firstName < $1.firstName})) { friend in
-            HStack {
-                Image("\(friend.photo50)")
-                    .resizable()
-                    .frame(width: 40, height: 40, alignment: .center)
-                    .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
-                Text("\(friend.firstName) \(friend.lastName)")
+            NavigationLink(destination: FriendDetailView(friend: friend)) {
+                HStack {
+                    Image("\(friend.photo50)")
+                        .resizable()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
+                    Text("\(friend.firstName) \(friend.lastName)")
+                }
             }
+            .navigationTitle("Friends")
         }
-        .navigationTitle("Friends")
     }
 }
 

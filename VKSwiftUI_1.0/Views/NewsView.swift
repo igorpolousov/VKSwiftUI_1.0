@@ -19,9 +19,9 @@ struct NewsView: View {
             }
             .border(.gray, width: 0.8)
             .cornerRadius(2)
+            
         }
         .navigationTitle("News feed")
-        
     }
 
 

@@ -19,8 +19,9 @@ struct GroupsView: View {
                     .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
                 Text("\(group.screenName)")
             }
+            .navigationTitle("Groups")
         }
-        .navigationTitle("Grroups")
+        
     }
 }
 

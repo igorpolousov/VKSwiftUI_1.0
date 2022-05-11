@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct FriendDetailView: View {
-    var body: some View {
-        Image("gena")
-            .resizable()
-            .frame(width: 300, height: 400, alignment: .center)
-            .cornerRadius(30)
-            .shadow(color: .gray, radius: 10, x: 10, y: 10)
-    }
     
+    var friend: Friend
+    
+    var body: some View {
+        
+        VStack {
+            Image("\(friend.photo50)")
+                .resizable()
+                .frame(width: 300, height: 400, alignment: .center)
+                .cornerRadius(30)
+                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+        }
+        .padding(.bottom, 230)
+        .navigationTitle("Friend photo")
+    }
 }
 
 
 struct FriendDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendDetailView()
+        FriendDetailView(friend: friendsDemoData.first!)
     }
 }
