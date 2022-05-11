@@ -75,6 +75,7 @@
 				C24C4FA2282BB14500FB9C1B /* API */,
 				C24C4FA1282BB12900FB9C1B /* Models */,
 				C24C4FA0282BB11F00FB9C1B /* Views */,
+				C24C4FB9282BC27C00FB9C1B /* ViewModifiers */,
 				C24C4F96282BB0FA00FB9C1B /* Assets.xcassets */,
 				C24C4F98282BB0FA00FB9C1B /* Preview Content */,
 			);
@@ -119,6 +120,13 @@
 				C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		C24C4FB9282BC27C00FB9C1B /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
