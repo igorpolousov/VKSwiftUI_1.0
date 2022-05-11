@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C24C4F93282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4F92282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift */; };
-		C24C4F95282BB0F900FB9C1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4F94282BB0F900FB9C1B /* ContentView.swift */; };
 		C24C4F97282BB0FA00FB9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24C4F96282BB0FA00FB9C1B /* Assets.xcassets */; };
 		C24C4F9A282BB0FA00FB9C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24C4F99282BB0FA00FB9C1B /* Preview Assets.xcassets */; };
 		C24C4FA4282BB16000FB9C1B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FA3282BB16000FB9C1B /* LoginView.swift */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		C24C4F8F282BB0F900FB9C1B /* VKSwiftUI_1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKSwiftUI_1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24C4F92282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKSwiftUI_1_0App.swift; sourceTree = "<group>"; };
-		C24C4F94282BB0F900FB9C1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C24C4F96282BB0FA00FB9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24C4F99282BB0FA00FB9C1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C24C4FA3282BB16000FB9C1B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				C24C4F92282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift */,
-				C24C4F94282BB0F900FB9C1B /* ContentView.swift */,
 				C24C4FA2282BB14500FB9C1B /* API */,
 				C24C4FA1282BB12900FB9C1B /* Models */,
 				C24C4FA0282BB11F00FB9C1B /* Views */,
@@ -203,7 +200,6 @@
 				C24C4FB0282BB25D00FB9C1B /* FriendModel.swift in Sources */,
 				C24C4FB4282BB27900FB9C1B /* NewsModel.swift in Sources */,
 				C24C4FAC282BB23600FB9C1B /* NewsView.swift in Sources */,
-				C24C4F95282BB0F900FB9C1B /* ContentView.swift in Sources */,
 				C24C4FA6282BB17C00FB9C1B /* FriendsView.swift in Sources */,
 				C24C4FB6282BB2CD00FB9C1B /* AuthSession.swift in Sources */,
 				C24C4F93282BB0F900FB9C1B /* VKSwiftUI_1_0App.swift in Sources */,
