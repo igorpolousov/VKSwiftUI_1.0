@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct FriendsView: View {
+   
     
     var body: some View {
-        List(friends.sorted(by: {$0.firstName < $1.firstName})) { friend in
-            Text("\(friend.firstName) \(friend.lastName)")
+        List(friendsDemoData.sorted(by: {$0.firstName < $1.firstName})) { friend in
+            HStack {
+                Image("\(friend.photo50)")
+                    .resizable()
+                    .frame(width: 40, height: 40, alignment: .center)
+                    .modifier(CircleShadow(shadowColor: .black, shadowRadius: 4))
+                Text("\(friend.firstName) \(friend.lastName)")
+            }
         }
         .navigationTitle("Friends")
     }
 }
-
 
 
 struct FriendsView_Previews: PreviewProvider {
