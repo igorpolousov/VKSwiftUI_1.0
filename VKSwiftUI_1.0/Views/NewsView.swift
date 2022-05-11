@@ -19,13 +19,11 @@ struct NewsView: View {
 }
 
 
-struct NewsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsView()
-    }
-}
+
 
     struct AvatarNameDate: View {
+        
+        
         var body: some View {
             HStack {
                 Image("wti")
@@ -58,3 +56,8 @@ struct NewsView_Previews: PreviewProvider {
     }
 }
 
+struct NewsView_Previews: PreviewProvider {
+    static var previews: some View {
+        NewsView()
+    }
+}
