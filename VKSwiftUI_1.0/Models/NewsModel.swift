@@ -15,6 +15,7 @@ struct NewsResponse {
  }
 
  // MARK: Структура новостей
+
  struct NewsItems: Codable {
      var items: [NewsPost]
  }
@@ -71,6 +72,7 @@ struct NewsResponse {
  }
 
  // MARK: Структура для групп
+
  struct NewsGroups: Codable {
      var groups: [Group]
  }
@@ -80,11 +82,13 @@ struct ImageItem: Codable {
 }
 
  // MARK: Структура для профилей
+
  struct NewsProfiles: Codable {
      var profiles: [Friend]
  }
 
  // MAARK: Структура для смещения новостей
+
  struct NewsNextFrom: Codable {
      var nextFrom: String
      enum CodingKeys: String, CodingKey {
@@ -93,6 +97,7 @@ struct ImageItem: Codable {
  }
 
  // MARK: Структура для секций
+
  enum CellType {
      case photo
      case text
