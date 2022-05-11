@@ -14,8 +14,8 @@ struct FriendDetailView: View {
             .frame(width: 300, height: 400, alignment: .center)
             .cornerRadius(30)
             .shadow(color: .gray, radius: 10, x: 10, y: 10)
-
     }
+    
 }
 
 

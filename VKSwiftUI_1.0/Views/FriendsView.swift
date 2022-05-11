@@ -16,7 +16,7 @@ struct FriendsView: View {
                 Image("\(friend.photo50)")
                     .resizable()
                     .frame(width: 40, height: 40, alignment: .center)
-                    .modifier(CircleShadow(shadowColor: .black, shadowRadius: 4))
+                    .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
                 Text("\(friend.firstName) \(friend.lastName)")
             }
         }
