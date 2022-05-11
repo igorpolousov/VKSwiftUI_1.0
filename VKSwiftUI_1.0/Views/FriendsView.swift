@@ -23,6 +23,7 @@ struct FriendsView: View {
             }
             .navigationTitle("Friends")
         }
+        
     }
 }
 

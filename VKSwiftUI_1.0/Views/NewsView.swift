@@ -17,11 +17,10 @@ struct NewsView: View {
                     .padding(.top, 8)
                 NewsDescriptionAndImage(newsImage: newsItem.newsImage, newsText: newsItem.newsText)
             }
+            .navigationTitle("News feed")
             .border(.gray, width: 0.8)
             .cornerRadius(2)
-            
         }
-        .navigationTitle("News feed")
     }
 
 

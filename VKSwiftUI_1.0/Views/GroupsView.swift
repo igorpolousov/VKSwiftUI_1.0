@@ -21,7 +21,6 @@ struct GroupsView: View {
             }
             .navigationTitle("Groups")
         }
-        
     }
 }
 
