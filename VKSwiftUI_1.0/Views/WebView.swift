@@ -13,7 +13,8 @@ import WebKit
 
 struct VkWebView: UIViewRepresentable {
     
-    //var successCompletion: () -> Void
+//    var successCompletion: () -> Void
+    @Binding var isUserLoggedIn: Bool
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -61,9 +62,11 @@ struct VkWebView: UIViewRepresentable {
         webView.load(request)
     }
 
+    // MARK: Coordinator class
     class Coordinator: NSObject, WKNavigationDelegate {
         var parent: VkWebView
         var webViewNavigationSubscriber: AnyCancellable?
+        
 
         init(_ uiWebView: VkWebView) {
             parent = uiWebView
@@ -104,7 +107,8 @@ struct VkWebView: UIViewRepresentable {
             if token.count > 0 && userID > 0 {
                 AuthSession.shared.userId = userID
                 AuthSession.shared.token = token
-                //parent.successCompletion()
+                parent.isUserLoggedIn = true
+               // parent.successCompletion()
             }
 
             decisionHandler(.cancel)

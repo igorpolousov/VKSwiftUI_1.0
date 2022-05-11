@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-struct NavView: View {
-    @State private var shouldShowWebView: Bool = false
+struct LoginFromCustomLogin: View {
+    @State private var isActive: Bool = false
     
     var body: some View {
         NavigationView {
             HStack {
-                LoginView(isUserLoggedIn: $shouldShowWebView)
+                LoginView(isUserLoggedIn: $isActive)
                 
-                NavigationLink(destination: VkWebView(), isActive: $shouldShowWebView) {
+                NavigationLink(destination: LoginFromVkWebView(isActive: isActive), isActive: $isActive) {
                     EmptyView()
                 }
                 .navigationTitle("Login screen")
             }
         }
+        .navigationBarHidden(true)
     }
 }

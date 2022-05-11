@@ -12,7 +12,11 @@ struct VKSwiftUI_1_0App: App {
     @State var isLogin: Bool = false
     var body: some Scene {
         WindowGroup {
-            NavView()
+            if isLogin {
+                TabBarView()
+            } else {
+                LoginFromCustomLogin()
+            }
         }
     }
 }
