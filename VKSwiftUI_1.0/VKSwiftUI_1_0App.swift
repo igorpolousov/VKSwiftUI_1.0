@@ -9,14 +9,12 @@ import SwiftUI
 
 @main
 struct VKSwiftUI_1_0App: App {
-    @State var isLogin: Bool = false
+    //@State var isLogin: Bool = false
     var body: some Scene {
         WindowGroup {
-            if isLogin {
-                TabBarView()
-            } else {
-                LoginFromCustomLogin()
-            }
+            LoginFromCustomLogin()
+            //LoginFromVkWebView()
         }
     }
 }
+

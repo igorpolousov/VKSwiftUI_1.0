@@ -15,12 +15,12 @@ struct LoginFromCustomLogin: View {
             HStack {
                 LoginView(isUserLoggedIn: $isActive)
                 
-                NavigationLink(destination: LoginFromVkWebView(isActive: isActive), isActive: $isActive) {
+                NavigationLink(destination: LoginFromVkWebView(login: false), isActive: $isActive) {
                     EmptyView()
                 }
                 .navigationTitle("Login screen")
             }
         }
-        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }

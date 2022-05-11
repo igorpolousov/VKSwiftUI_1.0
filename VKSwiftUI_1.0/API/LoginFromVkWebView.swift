@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct LoginFromVkWebView: View {
-    @State var isActive: Bool
+    
+    @State var login: Bool = false
     var body: some View {
         NavigationView {
             VStack {
-                VkWebView(isUserLoggedIn: $isActive)
-                
-                NavigationLink(destination: TabBarView(), isActive: $isActive) {
+                VkWebView(isUserLoggedIn: $login)
+
+                NavigationLink(destination: TabBarView(), isActive: $login) {
                     EmptyView()
                 }
             }
         }
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }

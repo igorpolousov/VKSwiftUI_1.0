@@ -13,7 +13,7 @@ import WebKit
 
 struct VkWebView: UIViewRepresentable {
     
-//    var successCompletion: () -> Void
+   //var successCompletion: () -> Void
     @Binding var isUserLoggedIn: Bool
     
     func makeCoordinator() -> Coordinator {
@@ -108,7 +108,7 @@ struct VkWebView: UIViewRepresentable {
                 AuthSession.shared.userId = userID
                 AuthSession.shared.token = token
                 parent.isUserLoggedIn = true
-               // parent.successCompletion()
+                //parent.successCompletion()
             }
 
             decisionHandler(.cancel)

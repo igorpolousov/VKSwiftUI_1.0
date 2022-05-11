@@ -27,6 +27,7 @@ struct TabBarView: View {
                     Text("News")
                 }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
