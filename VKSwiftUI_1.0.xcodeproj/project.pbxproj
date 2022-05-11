@@ -21,6 +21,7 @@
 		C24C4FB4282BB27900FB9C1B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB3282BB27900FB9C1B /* NewsModel.swift */; };
 		C24C4FB6282BB2CD00FB9C1B /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB5282BB2CD00FB9C1B /* AuthSession.swift */; };
 		C24C4FB8282BB2F000FB9C1B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */; };
+		C24C4FBB282BC8EB00FB9C1B /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		C24C4FB3282BB27900FB9C1B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		C24C4FB5282BB2CD00FB9C1B /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
 		C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		C24C4FB9282BC27C00FB9C1B /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				C24C4FAE282BB24800FB9C1B /* WebView.swift in Sources */,
 				C24C4FA8282BB18E00FB9C1B /* FriendDetailView.swift in Sources */,
 				C24C4FA4282BB16000FB9C1B /* LoginView.swift in Sources */,
+				C24C4FBB282BC8EB00FB9C1B /* CircleAvatar.swift in Sources */,
 				C24C4FB0282BB25D00FB9C1B /* FriendModel.swift in Sources */,
 				C24C4FB4282BB27900FB9C1B /* NewsModel.swift in Sources */,
 				C24C4FAC282BB23600FB9C1B /* NewsView.swift in Sources */,
