@@ -22,7 +22,7 @@
 		C24C4FB2282BB26C00FB9C1B /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB1282BB26C00FB9C1B /* GroupModel.swift */; };
 		C24C4FB4282BB27900FB9C1B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB3282BB27900FB9C1B /* NewsModel.swift */; };
 		C24C4FB6282BB2CD00FB9C1B /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB5282BB2CD00FB9C1B /* AuthSession.swift */; };
-		C24C4FB8282BB2F000FB9C1B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */; };
+		C24C4FB8282BB2F000FB9C1B /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB7282BB2F000FB9C1B /* DataFetcher.swift */; };
 		C24C4FBB282BC8EB00FB9C1B /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */; };
 		C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,7 @@
 		C24C4FB1282BB26C00FB9C1B /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		C24C4FB3282BB27900FB9C1B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		C24C4FB5282BB2CD00FB9C1B /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
-		C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		C24C4FB7282BB2F000FB9C1B /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
 		C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				C24C4FB5282BB2CD00FB9C1B /* AuthSession.swift */,
-				C24C4FB7282BB2F000FB9C1B /* APIRequest.swift */,
+				C24C4FB7282BB2F000FB9C1B /* DataFetcher.swift */,
 				C24ABF59282C142400FD364F /* LoginFromCustomLogin.swift */,
 				C24ABF5B282C40F500FD364F /* LoginFromVkWebView.swift */,
 			);
@@ -215,7 +215,7 @@
 				C24C4FB2282BB26C00FB9C1B /* GroupModel.swift in Sources */,
 				C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */,
 				C24ABF5A282C142400FD364F /* LoginFromCustomLogin.swift in Sources */,
-				C24C4FB8282BB2F000FB9C1B /* APIRequest.swift in Sources */,
+				C24C4FB8282BB2F000FB9C1B /* DataFetcher.swift in Sources */,
 				C24C4FAE282BB24800FB9C1B /* WebView.swift in Sources */,
 				C24C4FA8282BB18E00FB9C1B /* FriendDetailView.swift in Sources */,
 				C24C4FA4282BB16000FB9C1B /* LoginView.swift in Sources */,
