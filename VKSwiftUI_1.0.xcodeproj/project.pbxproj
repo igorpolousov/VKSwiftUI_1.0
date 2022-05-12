@@ -25,6 +25,7 @@
 		C24C4FB8282BB2F000FB9C1B /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FB7282BB2F000FB9C1B /* DataFetcher.swift */; };
 		C24C4FBB282BC8EB00FB9C1B /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */; };
 		C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */; };
+		C2E133EA282D24910084877E /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133E9282D24910084877E /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C24C4FB7282BB2F000FB9C1B /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
 		C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		C2E133E9282D24910084877E /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				C24C4FAF282BB25D00FB9C1B /* FriendModel.swift */,
 				C24C4FB1282BB26C00FB9C1B /* GroupModel.swift */,
 				C24C4FB3282BB27900FB9C1B /* NewsModel.swift */,
+				C2E133E9282D24910084877E /* URLImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				C24C4FAE282BB24800FB9C1B /* WebView.swift in Sources */,
 				C24C4FA8282BB18E00FB9C1B /* FriendDetailView.swift in Sources */,
 				C24C4FA4282BB16000FB9C1B /* LoginView.swift in Sources */,
+				C2E133EA282D24910084877E /* URLImage.swift in Sources */,
 				C24C4FBB282BC8EB00FB9C1B /* CircleAvatar.swift in Sources */,
 				C24C4FB0282BB25D00FB9C1B /* FriendModel.swift in Sources */,
 				C24ABF5C282C40F500FD364F /* LoginFromVkWebView.swift in Sources */,
