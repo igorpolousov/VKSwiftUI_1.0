@@ -55,8 +55,8 @@ class DataFetcher: ObservableObject {
         let url = urlComponents.url!
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
-            if let jsonData = try? decoder.decode(GroupItems.self, from: data) {
-                groupsFetched = jsonData.items
+            if let jsonData = try? decoder.decode(GroupContainer.self, from: data) {
+                groupsFetched = jsonData.response.items
             }
         }
         return

@@ -10,16 +10,22 @@ import Combine
 
 struct GroupsView: View {
     
+    @StateObject private var fetcher = DataFetcher()
+    
     var body: some View {
-        List(groupsDemoData.sorted(by: {$0.screenName < $1.screenName})) { group in
-            HStack {
-                Image("\(group.photo)")
-                    .resizable()
-                    .frame(width: 40, height: 40, alignment: .center)
-                    .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
-                Text("\(group.screenName)")
+        NavigationView {
+            List {
+                ForEach(fetcher.groupsFetched, id: \.self) { group in
+                    HStack {
+                        URLImage(urlString: group.photo100)
+                        Text("\(group.screenName)")
+                    }
+                }
             }
             .navigationTitle("Groups")
+            .onAppear {
+                fetcher.fetchGroups()
+            }
         }
     }
 }

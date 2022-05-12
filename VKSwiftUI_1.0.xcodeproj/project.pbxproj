@@ -153,8 +153,8 @@
 		C2E133EE282D29220084877E /* FriendsViews */ = {
 			isa = PBXGroup;
 			children = (
-				C24C4FA7282BB18E00FB9C1B /* FriendDetailView.swift */,
 				C24C4FA5282BB17C00FB9C1B /* FriendsView.swift */,
+				C24C4FA7282BB18E00FB9C1B /* FriendDetailView.swift */,
 			);
 			path = FriendsViews;
 			sourceTree = "<group>";

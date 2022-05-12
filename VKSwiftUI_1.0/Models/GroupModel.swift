@@ -8,24 +8,31 @@
 import Foundation
 import Combine
 
-struct GroupItems: Codable {
-     var items: [Group]
- }
+struct GroupContainer: Codable {
+    let response: GroupResponse
+}
 
- struct Group: Codable, Hashable {
-     var id: Double
-     var screenName: String
-     var photo: String
+// MARK: - Response
+struct GroupResponse: Codable {
+    let count: Int
+    let items: [Group]
+}
 
-     enum CodingKeys: String, CodingKey {
-         case id
-         case screenName = "screen_name"
-         case photo = "photo_50"
-     }
- }
+// MARK: - Item
+struct Group: Codable,Hashable {
+    let photo100: String
+    let screenName: String
+    
 
-let groupsDemoData: [Group] = [
-    Group(id: 1, screenName: "WTI", photo: "wti"),
-    Group(id: 2, screenName: "Moto", photo: "moto"),
-    Group(id: 3, screenName: "Dollars", photo: "dollars")
-]
+    enum CodingKeys: String, CodingKey {
+        case photo100 = "photo_100"
+        case screenName = "screen_name"
+    }
+}
+
+
+//let groupsDemoData: [Group] = [
+//    Group(id: 1, screenName: "WTI", photo: "wti"),
+//    Group(id: 2, screenName: "Moto", photo: "moto"),
+//    Group(id: 3, screenName: "Dollars", photo: "dollars")
+//]
