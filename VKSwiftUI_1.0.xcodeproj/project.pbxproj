@@ -28,7 +28,6 @@
 		C2E133EA282D24910084877E /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133E9282D24910084877E /* URLImage.swift */; };
 		C2E133EC282D26780084877E /* URLImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133EB282D26780084877E /* URLImageDetail.swift */; };
 		C2E133F3282D2F9B0084877E /* NewsDescriptionAndImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133F2282D2F9A0084877E /* NewsDescriptionAndImageView.swift */; };
-		C2E133F5282D2FB50084877E /* AvatarNameDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133F4282D2FB40084877E /* AvatarNameDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +53,6 @@
 		C2E133E9282D24910084877E /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		C2E133EB282D26780084877E /* URLImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageDetail.swift; sourceTree = "<group>"; };
 		C2E133F2282D2F9A0084877E /* NewsDescriptionAndImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDescriptionAndImageView.swift; sourceTree = "<group>"; };
-		C2E133F4282D2FB40084877E /* AvatarNameDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarNameDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				C24C4FAB282BB23600FB9C1B /* NewsView.swift */,
-				C2E133F4282D2FB40084877E /* AvatarNameDate.swift */,
 				C2E133F2282D2F9A0084877E /* NewsDescriptionAndImageView.swift */,
 			);
 			path = NewsViews;
@@ -264,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E133EC282D26780084877E /* URLImageDetail.swift in Sources */,
-				C2E133F5282D2FB50084877E /* AvatarNameDate.swift in Sources */,
 				C24C4FAA282BB22800FB9C1B /* GroupsView.swift in Sources */,
 				C24C4FB2282BB26C00FB9C1B /* GroupModel.swift in Sources */,
 				C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */,

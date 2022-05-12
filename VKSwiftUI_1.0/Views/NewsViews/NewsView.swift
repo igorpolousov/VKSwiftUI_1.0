@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct NewsView: View {
+    
+    @StateObject private var fetcher = DataFetcher()
+    
     var body: some View {
         NavigationView {
             List {
-                
+                ForEach(fetcher.newsFetchedGroups,  id:\.self) { newsItem in
+                    HStack {
+                        URLImage(urlString: newsItem.photo50)
+                        VStack {
+                            Text(newsItem.screenName)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("News")
+            .onAppear {
+                fetcher.fetchNews()
             }
         }
-        
-//        List(news.sorted(by: {$0.newsDate < $1.newsDate})) { newsItem in
-//            VStack {
-//                AvatarNameDate(avatarImage: newsItem.userImage, userName: newsItem.userName, newsDate: newsItem.newsDate)
-//                    .padding(.top, 8)
-//                NewsDescriptionAndImage(newsImage: newsItem.newsImage, newsText: newsItem.newsText)
-//            }
-//            .navigationTitle("News feed")
-//            .border(.gray, width: 0.8)
-//            .cornerRadius(2)
-//        }
     }
 }
 

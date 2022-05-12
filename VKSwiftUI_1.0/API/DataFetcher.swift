@@ -15,7 +15,8 @@ class DataFetcher: ObservableObject {
     
     @Published var friendsFetched = [Friend]()
     @Published var groupsFetched = [Group]()
-    @Published var newsFetched = [NewsGroup]()
+    @Published var newsFetchedGroups = [NewsGroup]()
+    @Published var newsFetchedItems = [ResponseItem]()
     
     // MARK: Get friends data
     func fetchFriends() {
@@ -85,7 +86,8 @@ class DataFetcher: ObservableObject {
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
             if let jsonData = try? decoder.decode(NewsContainer.self, from: data) {
-                newsFetched = jsonData.response.groups
+                newsFetchedGroups = jsonData.response.groups
+                newsFetchedItems = jsonData.response.items
             }
         }
         return

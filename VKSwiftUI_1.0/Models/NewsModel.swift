@@ -23,7 +23,7 @@ struct NewsResponse: Codable {
 }
 
 // MARK: - Group
-struct NewsGroup: Codable {
+struct NewsGroup: Codable, Hashable {
     let id: Int
     let photo50: String
     let screenName: String
@@ -36,7 +36,7 @@ struct NewsGroup: Codable {
 }
 
 // MARK: - ResponseItem
-struct ResponseItem: Codable {
+struct ResponseItem: Codable, Hashable {
     let date: Int
     let text: String?
     //let photos: Photos?
