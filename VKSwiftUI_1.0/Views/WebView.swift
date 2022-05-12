@@ -105,7 +105,7 @@ struct VkWebView: UIViewRepresentable {
             else { return decisionHandler(.allow) }
 
             if token.count > 0 && userID > 0 {
-                AuthSession.shared.userId = userID
+                AuthSession.shared.userId = userIDString
                 AuthSession.shared.token = token
                 parent.isUserLoggedIn = true
                 //parent.successCompletion()

@@ -22,7 +22,7 @@ struct FriendsResponse: Codable {
 }
 
 // MARK: - Friend
-struct Friend: Codable, Identifiable {
+struct Friend: Codable,Hashable {
     let id: Double
     let lastName: String
     let photo50: String

@@ -7,23 +7,32 @@
 
 import SwiftUI
 
+
 struct FriendsView: View {
    
+    @StateObject private var fetcher = DataFetcher()
     
     var body: some View {
-        List(friendsDemoData.sorted(by: {$0.firstName < $1.firstName})) { friend in
-            NavigationLink(destination: FriendDetailView(friend: friend)) {
-                HStack {
-                    Image("\(friend.photo50)")
-                        .resizable()
-                        .frame(width: 40, height: 40, alignment: .center)
-                        .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
-                    Text("\(friend.firstName) \(friend.lastName)")
+        NavigationView {
+            List {
+                ForEach(fetcher.friendsFetched, id: \.self) { friend in
+                    HStack {
+                        Image("")
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                            .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
+                            .onAppear {
+                                
+                            }
+                        Text("\(friend.firstName) \(friend.lastName)")
+                    }
                 }
             }
             .navigationTitle("Friends")
+            .onAppear {
+                fetcher.fetchFriends()
+            }
         }
-        
     }
 }
 

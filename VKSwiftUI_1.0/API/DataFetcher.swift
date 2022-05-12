@@ -8,12 +8,15 @@
 
 import UIKit
 
-class friendsDataFetcher: ObservableObject {
+class DataFetcher: ObservableObject {
     
     var urlComponents = URLComponents()
     let session = URLSession.shared
     
-    func fetchFriends() -> [Friend] {
+    @Published var friendsFetched = [Friend]()
+    
+    func fetchFriends() {
+        
         urlComponents.scheme = "https"
         urlComponents.host = "api.vk.com"
         urlComponents.path = "/method/friends.get"
@@ -28,10 +31,10 @@ class friendsDataFetcher: ObservableObject {
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
             if let jsonData = try? decoder.decode(FriendsContainer.self, from: data) {
-                friends = jsonData.response.items
+                friendsFetched = jsonData.response.items
             }
         }
-        return friends
+        return 
     }
   
     
