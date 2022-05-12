@@ -14,9 +14,10 @@ class DataFetcher: ObservableObject {
     let session = URLSession.shared
     
     @Published var friendsFetched = [Friend]()
+    @Published var groupsFetched = [Group]()
     
+    // MARK: Get friends data
     func fetchFriends() {
-        
         urlComponents.scheme = "https"
         urlComponents.host = "api.vk.com"
         urlComponents.path = "/method/friends.get"
@@ -27,6 +28,7 @@ class DataFetcher: ObservableObject {
             URLQueryItem(name: "access_token", value: AuthSession.shared.token),
             URLQueryItem(name: "v", value: "5.131")
         ]
+        
         let url = urlComponents.url!
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
@@ -35,6 +37,29 @@ class DataFetcher: ObservableObject {
             }
         }
         return 
+    }
+    
+    // MARK: Get groups data
+    func fetchGroups() {
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.vk.com"
+        urlComponents.path = "/method/groups.get"
+        urlComponents.queryItems = [
+            URLQueryItem(name: "user_ids", value: AuthSession.shared.userId),
+            URLQueryItem(name: "extended", value: "1"),
+            URLQueryItem(name: "fields", value: "extended"),
+            URLQueryItem(name: "access_token", value: AuthSession.shared.token),
+            URLQueryItem(name: "v", value: "5.131")
+        ]
+        
+        let url = urlComponents.url!
+        if let data = try? Data(contentsOf: url) {
+            let decoder = JSONDecoder()
+            if let jsonData = try? decoder.decode(GroupItems.self, from: data) {
+                groupsFetched = jsonData.items
+            }
+        }
+        return
     }
   
     

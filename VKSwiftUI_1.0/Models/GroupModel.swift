@@ -12,7 +12,7 @@ struct GroupItems: Codable {
      var items: [Group]
  }
 
- struct Group: Codable, Identifiable {
+ struct Group: Codable, Hashable {
      var id: Double
      var screenName: String
      var photo: String
