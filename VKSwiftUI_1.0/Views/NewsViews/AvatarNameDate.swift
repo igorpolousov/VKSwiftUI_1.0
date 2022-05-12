@@ -15,10 +15,7 @@ struct AvatarNameDate: View {
     
     var body: some View {
         HStack {
-            Image(avatarImage)
-                .resizable()
-                .frame(width: 40, height: 40, alignment: .center)
-                .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
+            URLImage(urlString: <#T##String#>)
             VStack {
                 Text(userName).font(.system(size: 16))
                 Text(newsDate).font(.system(size: 16))

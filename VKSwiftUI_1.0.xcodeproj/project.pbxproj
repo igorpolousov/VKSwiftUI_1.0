@@ -187,8 +187,8 @@
 				C24ABF59282C142400FD364F /* LoginFromCustomLogin.swift */,
 				C24ABF5B282C40F500FD364F /* LoginFromVkWebView.swift */,
 				C2E133EB282D26780084877E /* URLImageDetail.swift */,
-				C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */,
 				C2E133E9282D24910084877E /* URLImage.swift */,
+				C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */,
 			);
 			path = SupplementaryViews;
 			sourceTree = "<group>";

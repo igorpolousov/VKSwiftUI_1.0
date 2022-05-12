@@ -15,6 +15,7 @@ class DataFetcher: ObservableObject {
     
     @Published var friendsFetched = [Friend]()
     @Published var groupsFetched = [Group]()
+    @Published var newsFetched = [NewsGroup]()
     
     // MARK: Get friends data
     func fetchFriends() {
@@ -61,6 +62,33 @@ class DataFetcher: ObservableObject {
         }
         return
     }
-  
+    
+    
+    // MARK: Get news data
+    func fetchNews() {
+        let startFrom = ""
+        
+        self.urlComponents.scheme = "https"
+        self.urlComponents.host = "api.vk.com"
+        self.urlComponents.path = "/method/newsfeed.get"
+        self.urlComponents.queryItems = [
+            URLQueryItem(name: "user_ids", value: AuthSession.shared.userId),
+            //URLQueryItem(name: "order", value: "name"),
+            URLQueryItem(name: "filters", value: "post, photo"),
+            URLQueryItem(name: "access_token", value: AuthSession.shared.token),
+            URLQueryItem(name: "count", value: "10"),
+            URLQueryItem(name: "v", value: "5.131"),
+            URLQueryItem(name: "start_from", value: startFrom)
+        ]
+        
+        let url = urlComponents.url!
+        if let data = try? Data(contentsOf: url) {
+            let decoder = JSONDecoder()
+            if let jsonData = try? decoder.decode(NewsContainer.self, from: data) {
+                newsFetched = jsonData.response.groups
+            }
+        }
+        return
+    }
     
 }

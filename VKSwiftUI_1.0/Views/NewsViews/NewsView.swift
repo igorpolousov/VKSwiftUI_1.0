@@ -9,17 +9,22 @@ import SwiftUI
 
 struct NewsView: View {
     var body: some View {
-        
-        List(news.sorted(by: {$0.newsDate < $1.newsDate})) { newsItem in
-            VStack {
-                AvatarNameDate(avatarImage: newsItem.userImage, userName: newsItem.userName, newsDate: newsItem.newsDate)
-                    .padding(.top, 8)
-                NewsDescriptionAndImage(newsImage: newsItem.newsImage, newsText: newsItem.newsText)
+        NavigationView {
+            List {
+                
             }
-            .navigationTitle("News feed")
-            .border(.gray, width: 0.8)
-            .cornerRadius(2)
         }
+        
+//        List(news.sorted(by: {$0.newsDate < $1.newsDate})) { newsItem in
+//            VStack {
+//                AvatarNameDate(avatarImage: newsItem.userImage, userName: newsItem.userName, newsDate: newsItem.newsDate)
+//                    .padding(.top, 8)
+//                NewsDescriptionAndImage(newsImage: newsItem.newsImage, newsText: newsItem.newsText)
+//            }
+//            .navigationTitle("News feed")
+//            .border(.gray, width: 0.8)
+//            .cornerRadius(2)
+//        }
     }
 }
 

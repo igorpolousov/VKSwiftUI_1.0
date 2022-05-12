@@ -5,7 +5,50 @@
 //  Created by Igor Polousov on 11.05.2022.
 //
 
+// MARK: - Welcome
+struct NewsContainer: Codable {
+    let response: NewsResponse
+}
 
+// MARK: - Response
+struct NewsResponse: Codable {
+    let items: [ResponseItem] // содержание поста текст фото
+    let groups: [NewsGroup] // аватарка и назвние группы
+    let nextFrom: String
+
+    enum CodingKeys: String, CodingKey {
+        case items, groups
+        case nextFrom = "next_from"
+    }
+}
+
+// MARK: - Group
+struct NewsGroup: Codable {
+    let id: Int
+    let photo50: String
+    let screenName: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case photo50 = "photo_50"
+        case screenName = "screen_name"
+    }
+}
+
+// MARK: - ResponseItem
+struct ResponseItem: Codable {
+    let date: Int
+    let text: String?
+    //let photos: Photos?
+   
+
+    enum CodingKeys: String, CodingKey {
+        case date
+        case text
+        //case photos
+        
+    }
+}
 
 struct News: Identifiable {
     var id: Double
