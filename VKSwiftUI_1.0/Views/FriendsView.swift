@@ -19,10 +19,12 @@ struct FriendsView: View {
         NavigationView {
             List {
                 ForEach(fetcher.friendsFetched, id: \.self) { friend in
-                    HStack {
-                        URLImage(urlString: friend.photo50,data: nil)
-    
-                        Text("\(friend.firstName) \(friend.lastName)")
+                    NavigationLink(destination: FriendDetailView(friend: friend)) {
+                        HStack {
+                            URLImage(urlString: friend.photo50,data: nil)
+        
+                            Text("\(friend.firstName) \(friend.lastName)")
+                        }
                     }
                 }
             }

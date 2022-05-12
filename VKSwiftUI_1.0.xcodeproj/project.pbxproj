@@ -26,6 +26,7 @@
 		C24C4FBB282BC8EB00FB9C1B /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */; };
 		C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */; };
 		C2E133EA282D24910084877E /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133E9282D24910084877E /* URLImage.swift */; };
+		C2E133EC282D26780084877E /* URLImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E133EB282D26780084877E /* URLImageDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		C24C4FBA282BC8EB00FB9C1B /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
 		C24C4FBD282BD5F800FB9C1B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C2E133E9282D24910084877E /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		C2E133EB282D26780084877E /* URLImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				C24C4FB1282BB26C00FB9C1B /* GroupModel.swift */,
 				C24C4FB3282BB27900FB9C1B /* NewsModel.swift */,
 				C2E133E9282D24910084877E /* URLImage.swift */,
+				C2E133EB282D26780084877E /* URLImageDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E133EC282D26780084877E /* URLImageDetail.swift in Sources */,
 				C24C4FAA282BB22800FB9C1B /* GroupsView.swift in Sources */,
 				C24C4FB2282BB26C00FB9C1B /* GroupModel.swift in Sources */,
 				C24C4FBE282BD5F800FB9C1B /* TabBarView.swift in Sources */,

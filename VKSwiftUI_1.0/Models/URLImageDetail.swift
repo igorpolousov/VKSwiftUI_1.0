@@ -1,5 +1,5 @@
 //
-//  URLImage.swift
+//  URLImageDetail.swift
 //  VKSwiftUI_1.0
 //
 //  Created by Igor Polousov on 12.05.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct URLImage: View {
+struct URLImageBig: View {
     let urlString: String
     @State var data: Data?
     
@@ -16,13 +16,15 @@ struct URLImage: View {
         if let data = data, let uiimage = UIImage(data: data) {
             Image(uiImage: uiimage)
                 .resizable()
-                .frame(width: 40, height: 40, alignment: .center)
-                .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
+                .frame(width: 300, height: 400, alignment: .center)
+                .cornerRadius(30)
+                .shadow(color: .gray, radius: 10, x: 10, y: 10)
         } else {
             Image("donald")
                 .resizable()
-                .frame(width: 40, height: 40, alignment: .center)
-                .modifier(CircleShadow(shadowColor: .gray, shadowRadius: 4))
+                .frame(width: 300, height: 400, alignment: .center)
+                .cornerRadius(30)
+                .shadow(color: .gray, radius: 10, x: 10, y: 10)
                 .onAppear {
                     fetchData()
                 }
