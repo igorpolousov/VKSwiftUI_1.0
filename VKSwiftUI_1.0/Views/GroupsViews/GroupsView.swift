@@ -11,6 +11,7 @@ import Combine
 struct GroupsView: View {
     
     @StateObject private var fetcher = DataFetcher()
+    @CaseModifier(wrappedValue: "Groups Property Wrapper", chooseCodingCase: .kebabCase)  var kebabText: String
     
     var body: some View {
         NavigationView {
@@ -22,7 +23,7 @@ struct GroupsView: View {
                     }
                 }
             }
-            .navigationTitle("Groups")
+            .navigationTitle(kebabText)
             .onAppear {
                 fetcher.fetchGroups()
             }

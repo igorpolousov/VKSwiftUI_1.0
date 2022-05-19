@@ -10,6 +10,7 @@ import SwiftUI
 struct NewsView: View {
     
     @StateObject private var fetcher = DataFetcher()
+    @CaseModifier(wrappedValue: "News Property Wrapper", chooseCodingCase: .snakeCase)  var snakeText: String
     
     var body: some View {
         NavigationView {
@@ -23,7 +24,7 @@ struct NewsView: View {
                     }
                 }
             }
-            .navigationTitle("News")
+            .navigationTitle(snakeText)
             .onAppear {
                 fetcher.fetchNews()
             }
