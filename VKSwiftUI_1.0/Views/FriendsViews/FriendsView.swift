@@ -14,6 +14,7 @@ import SwiftUI
 struct FriendsView: View {
    
     @StateObject private var fetcher = DataFetcher()
+    @CaseModifier(wrappedValue: "Friends Property Wrapper", chooseCodingCase: .camelCase)  var camelText: String
     
     var body: some View {
         NavigationView {
@@ -28,7 +29,7 @@ struct FriendsView: View {
                     }
                 }
             }
-            .navigationTitle("Friends")
+            .navigationTitle(camelText)
             .onAppear {
                 fetcher.fetchFriends()
             }
