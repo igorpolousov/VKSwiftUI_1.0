@@ -32,17 +32,23 @@ class DataFetcher: ObservableObject {
         ]
         
         let url = urlComponents.url!
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let jsonData = try? decoder.decode(FriendsContainer.self, from: data) {
-                friendsFetched = jsonData.response.items
+        print("URL_URL_URL:\(url)")
+        DispatchQueue.global(qos: .background).async {
+            if let data = try? Data(contentsOf: url) {
+                let decoder = JSONDecoder()
+                if let jsonData = try? decoder.decode(FriendsContainer.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.friendsFetched = jsonData.response.items
+                    }
+                }
             }
         }
-        return 
+        //return
     }
     
     // MARK: Get groups data
     func fetchGroups() {
+        
         urlComponents.scheme = "https"
         urlComponents.host = "api.vk.com"
         urlComponents.path = "/method/groups.get"
@@ -55,13 +61,18 @@ class DataFetcher: ObservableObject {
         ]
         
         let url = urlComponents.url!
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let jsonData = try? decoder.decode(GroupContainer.self, from: data) {
-                groupsFetched = jsonData.response.items
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else {return}
+            if let data = try? Data(contentsOf: url) {
+                let decoder = JSONDecoder()
+                if let jsonData = try? decoder.decode(GroupContainer.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.groupsFetched = jsonData.response.items
+                    }
+                }
             }
         }
-        return
+        //return
     }
     
     
@@ -83,14 +94,19 @@ class DataFetcher: ObservableObject {
         ]
         
         let url = urlComponents.url!
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let jsonData = try? decoder.decode(NewsContainer.self, from: data) {
-                newsFetchedGroups = jsonData.response.groups
-                newsFetchedItems = jsonData.response.items
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else {return}
+            if let data = try? Data(contentsOf: url) {
+                let decoder = JSONDecoder()
+                if let jsonData = try? decoder.decode(NewsContainer.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.newsFetchedGroups = jsonData.response.groups
+                        self.newsFetchedItems = jsonData.response.items
+                    }
+                }
             }
         }
-        return
+        //return
     }
     
 }

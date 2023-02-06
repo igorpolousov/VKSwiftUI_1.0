@@ -5,7 +5,6 @@
 //  Created by Igor Polousov on 11.05.2022.
 //
 
-import Foundation
 import Combine
 import SwiftUI
 import UIKit
@@ -45,7 +44,7 @@ struct VkWebView: UIViewRepresentable {
         let preferences = WKPreferences()
 
         let configuration = WKWebViewConfiguration()
-        configuration.userContentController.add(makeCoordinator() as! WKScriptMessageHandler, name: "iOSNative")
+        configuration.userContentController.add(makeCoordinator() as WKScriptMessageHandler, name: "iOSNative")
         configuration.preferences = preferences
 
         let webView = WKWebView(frame: CGRect.zero, configuration: configuration)

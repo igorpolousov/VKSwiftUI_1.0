@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginFromVkWebView: View {
     
     @State var login: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack {
